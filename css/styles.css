@@ -1,0 +1,113 @@
+:root {
+  --my-width:480px;
+  --my-fontSize:14px;
+  --my-color:210;
+  }
+
+body {
+  font-family: Arial, sans-serif;
+  background: hsl(var(--my-color), 40%, 98%);
+}
+
+#container-head{
+  position: absolute;
+}
+
+#color-setting{
+  position: relative;
+  right: -415px;
+  top: -99px;
+}
+
+.color-1{
+  border:1px solid hsl(210, 50%, 50%);
+  background-color: hsl(210, 40%, 90%);
+}
+
+.color-2{
+  border:1px solid hsl(60, 50%, 50%);
+  background-color: hsl(60, 40%, 90%);
+}
+
+.color-3{
+  border:1px solid hsl(130, 50%, 50%);
+  background-color: hsl(130, 40%, 90%);
+}
+
+.color-4{
+  border:1px solid hsl(0, 50%, 50%);
+  background-color: hsl(0, 40%, 90%);
+}
+
+.color-1,.color-2,.color-3,.color-4{
+  cursor: pointer;
+  width:10px;
+  height:10px;
+  display:inline-block;
+}
+
+#todo_new{
+  width:var(--my-width);
+  padding:8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#container{
+  width:var(--my-width);
+  margin: 15px auto;
+}
+
+h1{
+  border-top:1px solid #ccc;
+  text-align:center;
+  color: hsl(var(--my-color), 40%, 40%);
+  padding-top:8px;
+  margin-bottom:8px;
+}
+
+#todos{
+  list-style: none;
+  padding:0;
+}
+
+#todos>li{
+  font-size:var(--my-fontSize);
+  color: hsl(var(--my-color), 25%, 0%);
+  padding:6px;
+}
+
+.delete_todo{
+  float:right;
+  display:inline-block;
+  cursor: pointer;
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+#todo_template{
+  display:none;
+}
+
+#allclaer{
+  background: hsl(var(--my-color), 50%, 50%);
+  width: 100px;
+  padding: 8px;
+  margin-bottom:10px;
+  font-size:var(--my-fontSize);
+  color:#fff;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#expression{
+  padding: 8px;
+  font-size:12px;
+  color:#444;
+  background-color:#eee;
+  border:1px solid #ccc;
+  border-radius: 4px;
+}
