@@ -1,13 +1,13 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Simple Todos</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <div id="container">
 
-    <h1>シンプルTodos</h1>
+    <h1>Simple Todos</h1>
     <div id="container-head">
       <p id="color-setting">
         <span class="color-1"></span>
