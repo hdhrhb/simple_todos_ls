@@ -6,7 +6,20 @@
 
 body {
   font-family: Arial, sans-serif;
+  fotn-size:16px;
   background: hsl(var(--my-color), 40%, 98%);
+}
+
+#container{
+  width:var(--my-width);
+  margin: 15px auto;
+}
+
+#todo_new{
+  width:var(--my-width);
+  padding:8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #container-head{
@@ -44,18 +57,6 @@ body {
   width:10px;
   height:10px;
   display:inline-block;
-}
-
-#todo_new{
-  width:var(--my-width);
-  padding:8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#container{
-  width:var(--my-width);
-  margin: 15px auto;
 }
 
 h1{
@@ -110,4 +111,53 @@ h1{
   background-color:#eee;
   border:1px solid #ccc;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 768px){
+  body{
+    font-size:18px;
+  }
+
+  #container{
+    width:100%;
+    margin: 0 auto;
+  }
+
+  #new_todo_form{
+    margin-bottom:0px;
+  }
+
+  #todo_new{
+    font-size:18px;
+    width:100%;
+    padding:8px;
+    margin-bottom:0px;
+  }
+
+  #container-head{
+    position:static;
+  }
+
+  #color-setting{
+    margin:5px 0;
+    position:static;
+    text-align: center;
+  }
+
+  #todos{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  #todos>li{
+    font-size:16px;
+  }
+
+  .color-1,.color-2,.color-3,.color-4{
+    margin:5px;
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    display:inline-block;
+  }
 }
