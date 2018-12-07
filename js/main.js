@@ -1,10 +1,11 @@
 $(function(){
   'use strict';
 
+  const PREKEY='simple-task-';
+
   let s=localStorage;
 
   let root = document.documentElement;
-  // root.style.setProperty('--my-color', 200);
 
   let arr_color={
     color1:210,
@@ -13,28 +14,54 @@ $(function(){
     color4:0,
   };
 
+  // s.setItem('simple-task-1','task1');
+  // s.setItem('simple-task-2','task2');
+
+  function chageColor(color){
+    root.style.setProperty('--my-color', color);
+  }
+
   $('#color-setting').on('click','.color-1',function(){
-    root.style.setProperty('--my-color', arr_color.color1);
+    chageColor(arr_color.color1);
   });
 
   $('#color-setting').on('click','.color-2',function(){
-    root.style.setProperty('--my-color', arr_color.color2);
+    chageColor(arr_color.color2);
   });
 
   $('#color-setting').on('click','.color-3',function(){
-    root.style.setProperty('--my-color', arr_color.color3);
+    chageColor(arr_color.color3);
   });
 
   $('#color-setting').on('click','.color-4',function(){
-    root.style.setProperty('--my-color', arr_color.color4);
+    chageColor(arr_color.color4);
   });
 
+  function judgeTask(key){
+    if (key.length>12) {
+      if(key.substr(0,12)===PREKEY){
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function getNumberFromKey(key){
+    return key.substr(12,key.length-12);
+  }
+
+  //現在のタスクをローカルストレージから取得して表示
+  let id;
   for(let i=0;i<s.length;i++){
     let li=$('#todo_template').clone();
-    li.attr('data-id', s.key(i));
-    li.find('.todo_title').text(s.getItem(s.key(i)));
-    li.removeAttr('id');
-    $('#todos').prepend(li);
+
+    if (judgeTask(s.key(i))){
+      id=getNumberFromKey(s.key(i));
+      li.attr('data-id', id);
+      li.find('.todo_title').text(s.getItem(s.key(i)));
+      li.removeAttr('id');
+      $('#todos').prepend(li);
+    }
   }
 
   //create
@@ -44,14 +71,19 @@ $(function(){
     if(title===""){
       return;
     }
-    let max_number=s.key(0);
-    for(let i=1;i<s.length;i++){
-      if (s.key(i)>max_number){
-        max_number=s.key(i);
+
+    let max_number=0;
+    let tmp_number;
+    for(let i=0;i<s.length;i++){
+      if (judgeTask(s.key(i))){
+        tmp_number=getNumberFromKey(s.key(i));
+        if (tmp_number>max_number){
+          max_number=tmp_number;
+        }
       }
     }
     max_number++;
-    s.setItem(max_number,title);
+    s.setItem(PREKEY + max_number,title);
     let li=$('#todo_template').clone();
     li.attr('data-id', max_number);
     li.find('.todo_title').text(title);
@@ -81,14 +113,18 @@ $(function(){
       confirm_flag = confirm('タスクを削除しますか？');
     }
     if(confirm_flag){
-      s.removeItem(id);
+      s.removeItem(PREKEY+id);
       window.location.reload();
     }
   });
 
+  //clear all
   $('#allclaer').on('click',function(){
-    s.clear();
+    for(let ls in s){
+      if(judgeTask(ls)){
+        s.removeItem(PREKEY+getNumberFromKey(ls));
+      }
+    }
     window.location.reload();
   })
-
 });
