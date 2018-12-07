@@ -38,8 +38,8 @@ $(function(){
   });
 
   function judgeTask(key){
-    if (key.length>12) {
-      if(key.substr(0,12)===PREKEY){
+    if (key.length>PREKEY.length) {
+      if(key.substr(0,PREKEY.length)===PREKEY){
         return true;
       }
     }
@@ -47,7 +47,7 @@ $(function(){
   }
 
   function getNumberFromKey(key){
-    return key.substr(12,key.length-12);
+    return Number(key.substr(PREKEY.length,key.length-PREKEY.length));
   }
 
   //現在のタスクをローカルストレージから取得して表示
