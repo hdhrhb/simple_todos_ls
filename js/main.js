@@ -37,6 +37,7 @@ $(function(){
     chageColor(arr_color.color4);
   });
 
+  //keyに接頭辞に特定の文字が入っているか
   function judgeTask(key){
     if (key.length>PREKEY.length) {
       if(key.substr(0,PREKEY.length)===PREKEY){
@@ -46,6 +47,7 @@ $(function(){
     return false;
   }
 
+  //keyから数字を取得
   function getNumberFromKey(key){
     return Number(key.substr(PREKEY.length,key.length-PREKEY.length));
   }
