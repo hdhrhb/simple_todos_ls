@@ -8,7 +8,7 @@
   <meta property="og:title" content="シンプルタスク管理ツール " />
   <meta property="og:description" content="[Webサービス]ログインなしで使用できるシンプルなタスク管理ツールです" />
   <meta property="og:image" content="https://simple-todo-ls.herokuapp.com/img/icatch.png" />
-  <title>Simple Todos</title>
+  <title>シンプルタスク管理ツール</title>
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>

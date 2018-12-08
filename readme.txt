@@ -3,4 +3,5 @@
 
 herokuにアップするためにindex.phpはphpファイルになっている
 
-URL:https://simple-todo-ls.herokuapp.com/
+URL: https://simple-todo-ls.herokuapp.com/
+note: https://note.mu/hidehiroqt/n/n9fc3586adcf7 

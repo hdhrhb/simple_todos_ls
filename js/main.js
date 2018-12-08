@@ -14,9 +14,6 @@ $(function(){
     color4:0,
   };
 
-  // s.setItem('simple-task-1','task1');
-  // s.setItem('simple-task-2','task2');
-
   function chageColor(color){
     root.style.setProperty('--my-color', color);
   }
