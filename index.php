@@ -5,8 +5,8 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hidehiroqt" />
   <meta property="og:url" content="https://simple-todo-ls.herokuapp.com/" />
-  <meta property="og:title" content="[ログイン不要Webサービス]シンプルタスク管理ツール " />
-  <meta property="og:description" content="ログインなしで使用できるシンプルなタスク管理ツールです" />
+  <meta property="og:title" content="シンプルタスク管理ツール " />
+  <meta property="og:description" content="[Webサービス]ログインなしで使用できるシンプルなタスク管理ツールです" />
   <meta property="og:image" content="https://simple-todo-ls.herokuapp.com/img/icatch.png" />
   <title>Simple Todos</title>
 	<link rel="stylesheet" href="./css/styles.css">
