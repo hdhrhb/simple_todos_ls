@@ -2,13 +2,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  /*twitterカード設定*/
   <meta name="twitter:card" content="Summary Card" />
-  <meta name="twitter:site" content="@hidehiroqt" /> /*②*/
-  <meta property="og:url" content="https://simple-todo-ls.herokuapp.com/" /> /*③*/
-  <meta property="og:title" content="シンプルTodos ログイン不要" /> /*④*/
-  <meta property="og:description" content="ログインなしで使用できるシンプルなタスク管理ツールです" /> /*⑤*/
-  <meta property="og:image" content="./img/icatch.png" /> /*⑥*/
+  <meta name="twitter:site" content="@hidehiroqt" />
+  <meta property="og:url" content="https://simple-todo-ls.herokuapp.com/" />
+  <meta property="og:title" content="シンプルTodos ログイン不要" />
+  <meta property="og:description" content="ログインなしで使用できるシンプルなタスク管理ツールです" />
+  <meta property="og:image" content="./img/icatch.png" />
   <title>Simple Todos</title>
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
