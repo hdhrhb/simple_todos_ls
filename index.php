@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="twitter:card" content="Summary Card" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hidehiroqt" />
   <meta property="og:url" content="https://simple-todo-ls.herokuapp.com/" />
   <meta property="og:title" content="シンプルTodos ログイン不要" />
